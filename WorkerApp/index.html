@@ -908,7 +908,7 @@ header button svg, .edit-location-btn svg { pointer-events: none; }
              if (!state.activeVisit) return; 
             const data = { "Arrival Time": state.activeVisit.arrivalTimeForSheet, "Alarm Status": 'EMERGENCY - PANIC BUTTON', "Notes": 'Panic button activated by worker.' };
             if (gpsData) {
-                data["Last Known GPS"] = `${gpsData.latitude},${longitude}`;
+                data["Last Known GPS"] = `${gpsData.latitude},${gpsData.longitude}`;
                 data["GPS Timestamp"] = new Date().toISOString();
                 data.Notes += ' GPS successfully retrieved.';
             } else {
@@ -1568,4 +1568,5 @@ header button svg, .edit-location-btn svg { pointer-events: none; }
     </script>
 </body>
 </html>
+
 
